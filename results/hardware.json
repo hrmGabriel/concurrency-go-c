@@ -1,0 +1,959 @@
+{
+  "status": "complete",
+  "check_only": false,
+  "start_utc": "2026-10-14T19:28:11.246901+00:00",
+  "parameters": {
+    "output": "/home/caiobvg/Documents/Projects/pcd/concurrency-go-c/results/hibrido-2026-10-14_16-23-42",
+    "runs": 30,
+    "n": 5000000,
+    "batch": 8,
+    "seed": 20261014,
+    "check_only": false
+  },
+  "host": {
+    "system": "Linux",
+    "node": "caiobvg",
+    "release": "7.0.0-38-generic",
+    "version": "#38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 16:37:11 UTC 2",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "go": "go version go1.26.1 linux/amd64",
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           39 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  12\nOn-line CPU(s) list:                     0-11\nVendor ID:                               GenuineIntel\nModel name:                              12th Gen Intel(R) Core(TM) i7-1255U\nCPU family:                              6\nModel:                                   154\nThread(s) per core:                      2\nCore(s) per socket:                      10\nSocket(s):                               1\nStepping:                                4\nCPU(s) scaling MHz:                      55%\nCPU max MHz:                             4700.0000\nCPU min MHz:                             400.0000\nBogoMIPS:                                5222.40\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               352 KiB (10 instances)\nL1i cache:                               576 KiB (10 instances)\nL2 cache:                                6.5 MiB (4 instances)\nL3 cache:                                12 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-11\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Mitigation; Clear Register File\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace",
+  "protocol": "hibrido/PROTOCOLO.md",
+  "rows_written": 1800,
+  "source_sha256": {
+    "coletar_hibrido.py": "2042eaf2baa7de7b09b2749bb1fca1a110ef58affbdfdb36186c6d6c84470d69",
+    "analisar_hibrido.py": "9b6753efcfe0ddffca4c2ae4cad8095c053b0d5112643048bc193f5a55430d8d",
+    "hibrido/coletar_pcd.sh": "4b75ee87d48e50fdcd2065b58cc399add0953e6c0811a50eb5c3170a3df5cb58",
+    "hibrido/PROTOCOLO.md": "d1f82f379a4ca59f3deee9ee1ef98a19350acd91658766c991795e1087f30209",
+    "hibrido/test_analise.py": "2ce443bf602b5df4c97db3ad04b1a1d6ec60f0b88bd5cb011de4aeef3d4192ed",
+    "c/main.c": "71a02bb07da217ff5011e1d8ed957ecc17ed4e8efa929bbc525a92c354642fad",
+    "c/hybrid.c": "15f0effc55e002ebab9d1dcc67086b54d1efd5d30fa2d677116e00e4e7adf57a",
+    "c/test_hybrid.c": "0aeab4294025073cb0b89709a7d1ffc31d5bdc15f1dda15e09433b1ecaaacb6f",
+    "go/energy.go": "d2362e7913e93bf5c79b2f8ac6903b3bfb166f4b0c5a613da23c3c1bf78dc73d",
+    "go/energy_test.go": "f94b369d245987ac18eab535340e2f4295c2d7d0b146e1e1b13fafcb5e51b8be",
+    "go/hybrid_linux.go": "b30aa844a65dea9678ec1f42adf3cccb261860f62e4227c3313e62fff652804e",
+    "go/hybrid_linux_test.go": "4a702214673b7bbe32f07f4f6e3ed057693ba8ea866121ccb0e97a03375a624e",
+    "go/main.go": "d8032d8dcb40aa3537089503a032a04f7fb19d550a966544fe68bcd2e858557c",
+    "go/metrics.go": "8e89890ad4bc66b1dc4d4183596ab0523411dfc2117d09ecc6360a16a4fe28e6",
+    "go/primes.go": "2eb821d9d0a78b07abe13ffabed15283fb1bd801845cba20e28269554dbc17a9",
+    "go/primes_test.go": "5ec6d1b9e685c83eda5fdc2d8e399779f905c2dd1b5b2b9e9844e31e4164f4c9",
+    "go/go.mod": "a1b3ff26e69df98019e18b6a6bc54d8c534a7791d89eab5c192550a8aa9be968",
+    "requirements.txt": "9abb9ade9ce5082ce865eecefac49ce638a4a6655a6f085737695b323a3e3f99"
+  },
+  "governors": {
+    "/sys/devices/system/cpu/cpu11/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu9/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu10/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu8/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor": "powersave",
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor": "powersave"
+  },
+  "power_supplies": {
+    "BAT0": "DEVTYPE=power_supply\nPOWER_SUPPLY_NAME=BAT0\nPOWER_SUPPLY_TYPE=Battery\nPOWER_SUPPLY_STATUS=Charging\nPOWER_SUPPLY_HEALTH=Good\nPOWER_SUPPLY_PRESENT=1\nPOWER_SUPPLY_TECHNOLOGY=Li-poly\nPOWER_SUPPLY_CYCLE_COUNT=0\nPOWER_SUPPLY_VOLTAGE_MIN_DESIGN=15000000\nPOWER_SUPPLY_VOLTAGE_NOW=15645000\nPOWER_SUPPLY_CURRENT_NOW=1525000\nPOWER_SUPPLY_CHARGE_FULL_DESIGN=3564000\nPOWER_SUPPLY_CHARGE_FULL=2800000\nPOWER_SUPPLY_CHARGE_NOW=310000\nPOWER_SUPPLY_CAPACITY=11\nPOWER_SUPPLY_CAPACITY_LEVEL=Low\nPOWER_SUPPLY_TEMP=260\nPOWER_SUPPLY_TYPE=Battery\nPOWER_SUPPLY_MANUFACTURE_YEAR=2024\nPOWER_SUPPLY_MANUFACTURE_MONTH=6\nPOWER_SUPPLY_MANUFACTURE_DAY=24\nPOWER_SUPPLY_MODEL_NAME=DELL XDY9K46\nPOWER_SUPPLY_MANUFACTURER=SMP\nPOWER_SUPPLY_SERIAL_NUMBER=5210\n",
+    "AC": "DEVTYPE=power_supply\nPOWER_SUPPLY_NAME=AC\nPOWER_SUPPLY_TYPE=Mains\nPOWER_SUPPLY_ONLINE=1\nPOWER_SUPPLY_TYPE=Mains\n"
+  },
+  "binary_sha256": {
+    "c": "c21f2b314729467de1a9346080a0cfea446f7d5f067f6109e3cfdb5f312392fd",
+    "go": "040c64b22b1da82e8c59a0615d1048ceeb9adae8d2e717976b19ae9e86489ef0"
+  },
+  "topology": [
+    {
+      "cpu": 0,
+      "cpuid_core_type": 64,
+      "core_id": 0,
+      "package_id": 0,
+      "siblings": "0-1",
+      "kind": "P"
+    },
+    {
+      "cpu": 1,
+      "cpuid_core_type": 64,
+      "core_id": 0,
+      "package_id": 0,
+      "siblings": "0-1",
+      "kind": "P"
+    },
+    {
+      "cpu": 2,
+      "cpuid_core_type": 64,
+      "core_id": 4,
+      "package_id": 0,
+      "siblings": "2-3",
+      "kind": "P"
+    },
+    {
+      "cpu": 3,
+      "cpuid_core_type": 64,
+      "core_id": 4,
+      "package_id": 0,
+      "siblings": "2-3",
+      "kind": "P"
+    },
+    {
+      "cpu": 4,
+      "cpuid_core_type": 32,
+      "core_id": 8,
+      "package_id": 0,
+      "siblings": "4",
+      "kind": "E"
+    },
+    {
+      "cpu": 5,
+      "cpuid_core_type": 32,
+      "core_id": 9,
+      "package_id": 0,
+      "siblings": "5",
+      "kind": "E"
+    },
+    {
+      "cpu": 6,
+      "cpuid_core_type": 32,
+      "core_id": 10,
+      "package_id": 0,
+      "siblings": "6",
+      "kind": "E"
+    },
+    {
+      "cpu": 7,
+      "cpuid_core_type": 32,
+      "core_id": 11,
+      "package_id": 0,
+      "siblings": "7",
+      "kind": "E"
+    },
+    {
+      "cpu": 8,
+      "cpuid_core_type": 32,
+      "core_id": 12,
+      "package_id": 0,
+      "siblings": "8",
+      "kind": "E"
+    },
+    {
+      "cpu": 9,
+      "cpuid_core_type": 32,
+      "core_id": 13,
+      "package_id": 0,
+      "siblings": "9",
+      "kind": "E"
+    },
+    {
+      "cpu": 10,
+      "cpuid_core_type": 32,
+      "core_id": 14,
+      "package_id": 0,
+      "siblings": "10",
+      "kind": "E"
+    },
+    {
+      "cpu": 11,
+      "cpuid_core_type": 32,
+      "core_id": 15,
+      "package_id": 0,
+      "siblings": "11",
+      "kind": "E"
+    }
+  ],
+  "groups": {
+    "P": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "E": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "mixed": [
+      0,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      1,
+      3
+    ]
+  },
+  "configurations": [
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "P",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "P",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 0,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 1,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 2,
+      "cpus": [
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 4,
+      "cpus": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 8,
+      "cpus": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 0,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 1,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 2,
+      "cpus": [
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 4,
+      "cpus": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "E",
+      "workers": 8,
+      "cpus": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 0,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 1,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 2,
+      "cpus": [
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 4,
+      "cpus": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 8,
+      "cpus": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 0,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 1,
+      "cpus": [
+        4
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 2,
+      "cpus": [
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 4,
+      "cpus": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "E",
+      "workers": 8,
+      "cpus": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 8,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 12,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 8,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "trial",
+      "group": "mixed",
+      "workers": 12,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 8,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "batch": 8
+    },
+    {
+      "language": "c",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 12,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        1,
+        3
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 0,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 1,
+      "cpus": [
+        0
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 2,
+      "cpus": [
+        0,
+        2
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 4,
+      "cpus": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 8,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "batch": 8
+    },
+    {
+      "language": "go",
+      "algorithm": "segmented",
+      "group": "mixed",
+      "workers": 12,
+      "cpus": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        1,
+        3
+      ],
+      "batch": 8
+    }
+  ],
+  "expected_primes": 348513,
+  "total_samples": 1800,
+  "environment": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PROC_BIND": "FALSE",
+    "OMP_WAIT_POLICY": "PASSIVE",
+    "GOMAXPROCS": "effective workers",
+    "process_affinity": "exact selected CPU set before runtime startup"
+  },
+  "end_utc": "2026-10-14T20:17:16.790377+00:00"
+}
